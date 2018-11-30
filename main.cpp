@@ -1,3 +1,7 @@
+
+/*the trick is to find where they can meet outside the grid So I put two columns and two rows to the grid and run bfs
+The storage time of arrival of each person in each cell and the choice of cell shall be found the 3 persons and the least time*/
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef int  ll;
@@ -13,8 +17,6 @@ map<ll,ll>ma;
 string s1,s2,s;
 ll vis[500][500][5];
 char c[500][500];
-/*the trick is to find where they can meet outside the grid So I put two columns and two rows to the grid and run bfs
-The storage time of arrival of each person in each cell and the choice of cell shall be reflected in the petals of persons and the least time*/
 bool valid(int x,int y)
 {
     return (x<=n+1&&x>=0&&y<=m+1&&y>=0&&c[x][y]!='#');
